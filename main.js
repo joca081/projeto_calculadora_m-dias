@@ -1,6 +1,6 @@
 const form = document.getElementById('form-atividade');
 const imgAprovado = '<img src="./images/aprovado.png" alt="Celebrando" />';
-const imgReprovado = '<img src="./images/reprovado.png" alt="logo" />';
+const imgReprovado = '<img src="./images/reprovado.png" alt="Decepcionado" />';
 const atividades = [];
 const notas = [];
 const spanAprovado = '<span class="resultado aprovado">Aprovado</span>';
@@ -21,7 +21,7 @@ function adicionaLinha() {
     const inputNomeAtividade = document.getElementById('nome-atividade');
     const inputNotaAtividade = document.getElementById('nota-atividade');
 
-    if (atividades.include(inputNomeAtividade.value)) {
+    if (atividades.includes(inputNomeAtividade.value)) {
         alert(`a atividade ${inputNomeAtividade.value} já foi adicionada`);
     } else {
         atividades.push(inputNomeAtividade.value);
@@ -49,7 +49,7 @@ function atualizaMediaFinal() {
     const mediaFinal = calculaMediaFinal();
 
     document.getElementById('media-final-valor').innerHTML = mediaFinal;
-    document.getElementById('media-final-resultado').innerHTML = mediaFinal >= notaMinima ? spanAprovado : spanReprovado;
+    document.getElementById('media-final-resultado').innerHTML = mediaFinal >= notaMinima ? 'Aprovado' : 'Reprovado';
 }
 
 function calculaMediaFinal() {
