@@ -22,7 +22,7 @@ function adicionaLinha() {
     const inputNotaAtividade = document.getElementById('nota-atividade');
 
     if (atividades.includes(inputNomeAtividade.value)) {
-        alert(`a atividade ${inputNomeAtividade.value} já foi adicionada`);
+        alert(`A atividade ${inputNomeAtividade.value} já foi adicionada`);
     } else {
         atividades.push(inputNomeAtividade.value);
         notas.push(parseFloat(inputNotaAtividade.value));
